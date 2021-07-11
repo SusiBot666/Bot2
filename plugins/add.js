@@ -24,12 +24,12 @@ let handler = async (m, { conn, text, participants }) => {
         mentionedJid: conn.parseMention(teks)
       }
     })
-    await conn.sendGroupV4Invite(m.chat, jid, invite_code, invite_code_exp, false, 'Invitation to join my WhatsApp group', jpegThumbnail ? {
+    await conn.sendGroupV4Invite(m.chat, jid, invite_code, invite_code_exp, false, 'Invitación para unirse a mi grupo de WhatsApp', jpegThumbnail ? {
       jpegThumbnail
     } : {})
   }
 }
-handler.help = ['add', '+'].map(v => v + ' nomor,nomor')
+handler.help = ['add', '+'].map(v => v + '  ᴺᵘᵐᵉʳᵒ.📱')
 handler.tags = ['admin']
 handler.command = /^(add|\+)$/i
 handler.owner = false
