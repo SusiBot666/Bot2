@@ -221,11 +221,11 @@ module.exports = {
           if (xp > 200) m.reply('Ngecit -_-') // Hehehe
           else m.exp += xp
           if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-            this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
+            this.reply(m.chat, `Su límite ha terminado, compre a través de *${usedPrefix}buy*`, m)
             continue // Limit habis
           }
           if (plugin.level > _user.level) {
-            this.reply(m.chat, `diperlukan level ${plugin.level} untuk menggunakan perintah ini. Level kamu ${_user.level}`, m)
+            this.reply(m.chat, `Nivel requerido ${plugin.level} para usar este comando. Tu nivel ${_user.level}`, m)
             continue // If the level has not been reached
           }
           let extra = {
@@ -270,7 +270,7 @@ module.exports = {
                 console.error(e)
               }
             }
-            if (m.limit) m.reply(+ m.limit + ' Limit terpakai')
+            if (m.limit) m.reply(+ m.limit + ' 1 límite aplicado✒️, acuérdate comprar límites para seguir usando estas funciones')
           }
           break
         }
@@ -342,9 +342,9 @@ module.exports = {
         }
         break
       case 'promote':
-        text = (chat.sPromote || this.spromote || conn.spromote || '@user ```is now Admin```')
+        text = (chat.sPromote || this.spromote || conn.spromote || '@user ```Ahora es administrador```')
       case 'demote':
-        if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ```is no longer Admin```')
+        if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ```Ya no es administrador```')
         text = text.replace('@user', '@' + participants[0].split('@')[0])
         if (chat.detect) this.sendMessage(jid, text, MessageType.extendedText, {
           contextInfo: {
@@ -359,9 +359,9 @@ module.exports = {
     let chat = global.db.data.chats[m.key.remoteJid]
     if (chat.delete) return
     await this.reply(m.key.remoteJid, `
-Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
+Detectado @${m.participant.split`@`[0]} mensaje eliminado
 
-Untuk mematikan fitur ini, ketik
+Para desactivar esta función, escriba
 *.enable delete*
 `.trim(), m.message, {
       contextInfo: {
@@ -381,22 +381,22 @@ Untuk mematikan fitur ini, ketik
           return
         break
     }
-    await this.sendMessage(from, 'Maaf, karena anda menelfon bot. anda diblokir otomatis', MessageType.extendedText)
+    await this.sendMessage(from, 'Lo siento, porque llamaste al bot?. estás bloqueado automáticamente', MessageType.extendedText)
     await this.blockUser(from, 'add')
   }
 }
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
-    owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
-    mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Perintah ini hanya untuk member _*Premium*_ !',
-    group: 'Perintah ini hanya dapat digunakan di grup!',
-    private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-    admin: 'Perintah ini hanya untuk *Admin* grup!',
-    botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-    unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*'
+   rowner: 'Este comando solo puede ser utilizado por _*Susii*_',
+    owner: 'Este comando solo puede ser utilizado por _*Susii*_!',
+    mods: 'Este comando solo puede ser utilizado por _*Moderator*_ !',
+    premium: 'Este comando es solo para miembros _*Premium*_ !',
+    group: 'Este comando solo se puede usar en grupos!',
+    private: 'Este comando solo se puede usar en chats privados!',
+    admin: 'Este comando es solo para el *Admin*!',
+    botAdmin: 'Haga que el bot sea un *Admin* para usar este comando!',
+    unreg: 'Regístrese para utilizar esta función, escribiendo:\n\n*#reg nombre.edad*\n\nEjemplo: *#reg Susi666*'
   }[type]
   if (msg) return m.reply(msg)
 }
