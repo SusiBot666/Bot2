@@ -9,12 +9,12 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
 		throw `
 *Format salah! Contoh :*
 
-  *○ ${usedPrefix + command} close*
-  *○ ${usedPrefix + command} open*
+  *○ ${usedPrefix + command} cerrado*
+  *○ ${usedPrefix + command} abierto*
 `.trim()
 	await conn.groupSettingChange(m.chat, GroupSettingChange.messageSend, isClose)
 }
-handler.help = ['group *open / close*']
+handler.help = ['group ᵒᵖᵉⁿ / ᶜˡᵒˢᵉ']
 handler.tags = ['group']
 handler.command = /^(group)$/i
 handler.owner = false
