@@ -4,8 +4,8 @@ const artinama_api = [
   ['xteam', '/primbon/artinama', 'q', 'APIKEY', json => {
     if (!json.status) throw json
     return `
-*Nama:* ${json.result.nama}
-*Arti:* ${json.result.arti}
+*Nombre:* ${json.result.nama}
+*Articulo:* ${json.result.arti}
 
 *Makna:* ${json.result.maksud}
 `.trim()
@@ -25,7 +25,7 @@ const artinama_api = [
 ]
 
 let handler = async (m, { text }) => {
-  if (!text) throw 'Namanya siapa?'
+  if (!text) throw '¿Cual es el nombre?'
   let result = ''
   for (let [origin, pathname, query, apikey, fn] of artinama_api) {
     try {
@@ -40,7 +40,7 @@ let handler = async (m, { text }) => {
   }
   m.reply(result)
 }
-handler.help = ['artinama'].map(v => v + ' [nama]')
+handler.help = ['artinama'].map(v => v + ' ᴬᵘ́ⁿ ⁿᵒ ᵉˢᵗᵃ ᵈᶦˢᵖᵒⁿᶦᵇˡᵉ')
 handler.tags = ['kerang']
 handler.command = ['artinama']
 
