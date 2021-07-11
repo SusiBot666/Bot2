@@ -1,11 +1,11 @@
 let handler = async (m, { usedPrefix }) => {
     let id = m.chat
     conn.absen = conn.absen ? conn.absen : {}
-    if (!(id in conn.absen)) throw `_*Tidak ada absen berlangsung digrup ini!*_\n\n*${usedPrefix}mulaiabsen* - untuk memulai absen`
+    if (!(id in conn.absen)) throw `_*No hay ausentes en este grupo.!*_\n\n*${usedPrefix}empeieza hacer ausente* - empezar ausente`
 
     let absen = conn.absen[id][1]
     const wasVote = absen.includes(m.sender)
-    if (wasVote) throw '*Kamu sudah absen!*'
+    if (wasVote) throw '*Estas ausente!*'
     absen.push(m.sender)
     m.reply(`Done!`)
     let d = new Date
@@ -20,16 +20,16 @@ let handler = async (m, { usedPrefix }) => {
 Tanggal: ${date}
 ${conn.absen[id][2]}
 
-┌ *Yang sudah absen:*
+┌ *El que ha estado ausente:*
 │ 
 │ Total: ${absen.length}
-${list}
+│${list}
 │ 
 └────
 
-_by Ariffb_`, m, { contextInfo: { mentionedJid: absen } })
+_by Susi`, m, { contextInfo: { mentionedJid: absen } })
 }
-handler.help = ['absen']
+handler.help = ['absen ᴹᵘᵉˢᵗʳᵃ ᑫᵘᶦᵉⁿᵉˢ ᵉˢᵗᵃⁿ ᵃᵘˢᵉⁿᵗᵉˢ']
 handler.tags = ['absen']
 handler.command = /^(absen|hadir)$/i
 handler.group = true
