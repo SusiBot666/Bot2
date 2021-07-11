@@ -15,9 +15,9 @@ ${translation_en}
 `)
     }
     contoh = `*Asmaul Husna*\n\n`
-    anjuran = `\n\nDari Abu hurarirah radhiallahu anhu, Rasulullah Saw bersabda: "إِنَّ لِلَّهِ تَعَالَى تِسْعَةً وَتِسْعِينَ اسْمًا، مِائَةٌ إِلَّا وَاحِدًا، مَنْ أَحْصَاهَا دخل الجنة، وهو وتر يُحِبُّ الْوِتْرَ"
+    anjuran = `\n\nDe Abu Hurairah radhiallahu anhu, el Mensajero de Allah dijo: "Allah tiene noventa y nueve nombres, cien menos uno, quien los memorice entrará en el Paraíso, y él es un acorde que ama el acorde."
 
-Artinya: "Sesungguhnya Allah mempunyai sembilan puluh sembilan nama, alias seratus kurang satu. Barang siapa yang menghitung-hitungnya, niscaya masuk surga; Dia Witir dan menyukai yang witir".`
+Artinya: "En verdad, Allah tiene noventa y nueve nombres, es decir, cien menos uno. Quien los cuente, entrará en el Paraíso; Él es Witr y le gusta Witr.".`
     m.reply(contoh + data + anjuran)
 }
 handler.help = ['asmaulhusna [nomor]']
