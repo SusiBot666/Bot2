@@ -18,7 +18,7 @@ ${usedPrefix + command} latinkejawa selamat pagi
         case 'jawakelatin':
         case 'sundakelatin':
             let text = args.slice(1).join(' ')
-            let res = await fetch(global.API('xteam', '/aksara/' + args[0].toLowerCase(), { text }, 'APIKEY'))
+            let res = await fetch(global.API('xteam', '/aksara/' + args[0].toLowerCase(), { text }, 'CLAVE API'))
             if (res.status !== 200) throw await res.text()
             let json = await res.json()
             if (!json.status) throw json
@@ -28,7 +28,7 @@ ${usedPrefix + command} latinkejawa selamat pagi
             throw er
     }
 }
-handler.help = ['aksara'].map(v => v + ' <opsi> <teks>')
+handler.help = ['aksara'].map(v => v + ' ᴺᵒ ᶠᵘⁿᶜᶦᵒⁿᵃ ᵖᵒʳ ᵉˡ ᵐᵒᵐᵉⁿᵗᵒ')
 handler.tags = ['tools']
 handler.command = /^aksara$/i
 
