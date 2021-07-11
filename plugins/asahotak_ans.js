@@ -3,7 +3,7 @@ handler.before = async function (m) {
     let id = m.chat
     if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !/Ketik.*ao/i.test(m.quoted.text)) return !0
     conn.asahotak = conn.asahotak ? conn.asahotak : {}
-    if (!(id in conn.asahotak)) return m.reply('Soal itu telah berakhir')
+    if (!(id in conn.asahotak)) return m.reply('El asunto ha terminado')
     if (m.quoted.id == conn.asahotak[id][0].id) {
         let json = JSON.parse(JSON.stringify(conn.asahotak[id][1]))
         // m.reply(JSON.stringify(json, null, '\t'))
