@@ -2,55 +2,66 @@ let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
-  'main': 'Main',
-  'game': 'Game',
-  'xp': 'Exp & Limit',
-  'sticker': 'Sticker',
-  'kerang': 'Kerang Ajaib',
-  'quotes': 'Quotes',
-  'admin': 'Admin',
-  'group': 'Group',
-  'premium': 'Premium',
-  'internet': 'Internet',
-  'anonymous': 'Anonymous Chat',
-  'nulis': 'MagerNulis & Logo',
-  'downloader': 'Downloader',
-  'tools': 'Tools',
-  'fun': 'Fun',
-  'database': 'Database',
-  'vote': 'Voting',
-  'absen': 'Absen',
-  'quran': 'Al Qur\'an',
-  'jadibot': 'Jadi Bot',
-  'owner': 'Owner',
-  'host': 'Host',
-  'advanced': 'Advanced',
-  'info': 'Info',
-  '': 'No Category',
+  'main': '🎉Menu🎉',
+  'game': '🎮Juegos🎮',
+  'xp': '📉Exp & Limit📉',
+  'sticker': '🎃Sticker🎃',
+  'kerang': '✨Mágico✨',
+  'quotes': '✍🏼Citas✍🏼',
+  'admin': '👑Admin👑',
+  'group': '🌚Grupo🌝',
+  'premium': '😈Premium😈',
+  'internet': '💥Internet💥',
+  'anonymous': '🤐Anonymous Chat🤐',
+  'nulis': '✔Logos✔',
+  'downloader': '📥Descargas📥',
+  'tools': '🛠Herramientas🛠',
+  'fun': '🎭Fun🎭',
+  'database': '🔋Database🔋',
+  'vote': '🗞Votos🗞',
+  'absen': '👻Fantasmas👻',
+  'quran': '😎Mas comandos🌚',
+  'jadibot': '🥵Susi Bot🥵',
+  'owner': '😈Dueño😈',
+  'host': '⚡Host⚡',
+  'advanced': '☠️Avanzado☠️',
+  'info': '📱Info📱',
+  '': '📍NoAi📍',
 }
 const defaultMenu = {
   before: `
-╭─「 %me 」
-│ Hai, %name!
-│
-│ Tersisa *%limit Limit*
-│ Role *%role*
-│ Level *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
-│ %totalexp XP in Total
-│ 
-│ Tanggal: *%week %weton, %date*
-│ Tanggal Islam: *%dateIslamic*
-│ Waktu: *%time*
-│
-│ Uptime: *%uptime (%muptime)*
-│ Database: %rtotalreg of %totalreg
-│ Github:
-│ %github
-╰────
+*╭═┅〘 ${conn.getName(conn.user.jid)} 〙═╮*
+*║┊:* 🙂Ola pero no Ola de mar, %name!
+*║┊:* ⃟ ⃟  ━ೋ๑————๑ೋ━* ⃟ ⃟ *      
+*║┊:◄✜┢┅ீ͜ৡৢ͜͡✦━━◇━━ீ͜ৡৢ͜͡✦┅┧✜►*
+*║┊:* ✨ *%exp XP*
+*║┊:* ⚠𝗟𝗶𝗺𝗶𝘁𝗲𝘀 *%limit Limit*
+*║┊:*
+*║┊:* 📆𝗙𝗲𝗰𝗵𝗮: *%weton, %date*
+*║┊:* ⌚𝗛𝗼𝗿𝗮: *%time*
+*║┊:*
+*║┊:* 🕐𝘁𝗶𝗲𝗺𝗽𝗼 𝗱𝗲 𝗮𝗰𝘁𝗶𝘃𝗶𝗱𝗮𝗱: *%uptime*
+*║┊:* 💻𝗮𝗰𝘁𝗶𝘃𝗶𝗱𝗮𝗱 𝗽𝗿𝗶𝗻𝗰𝗶𝗽𝗮𝗹 *%muptime*
+*║┊:* 📁𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲: %totalreg numeros
+*║┊:* 👑Mi Instagram
+*║┊:* Susana_monterroza_
+*║┊:* Numero de la Dueña del Bot
+*║┊:* +503 7711 1111
+*║┊:* +503 7779 2043
+*╰═┅ৡৢ͜͡✦═══╡S͛͛uͧͧs͛͛iͥͥ╞═══┅ৡৢ͜͡✦═╯*
+%readmore
+*╭═┅〘🛑 𝗢𝗯𝗲𝗱𝗲𝗰𝗲 𝗹𝗮𝘀 𝗿𝗲𝗴𝗹𝗮𝘀 🛑〙*
+*▌║✙*❌𝑷𝒓𝒐𝒉𝒊𝒃𝒊𝒅𝒐 𝒍𝒍𝒂𝒎𝒂𝒓 𝒂𝒍 𝒃𝒐𝒕📲
+*▌║✙*❌𝑷𝒓𝒐𝒉𝒊𝒃𝒊𝒅𝒐 𝒔𝒑𝒂𝒎 𝒂𝒍 𝒃𝒐𝒕☢
+*▌║✙*❌𝑵𝒐 𝒂𝒈𝒓𝒆𝒈𝒂𝒓 𝒂𝒍 𝒃𝒐𝒕 𝒂 𝒈𝒓𝒖𝒑𝒐𝒔♻
+*▌║✙*✅𝑺igueme en Instagram🙂
+*▌║➫ Bot By:*
+*▌║✙* ị¡-Ṣusi.li.
+• < 🌟 ≫───•◦Comandos del BOT◦•───≪ 🌟 > •
 %readmore`.trimStart(),
-  header: '╭─「 %category 」',
-  body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────\n',
+  header: '╭═┅〘✨ %category 〙═╮',
+  body: '  • *▌┠❧ %cmd%islimit',
+  footer: '╰═┅ৡৢ͜͡✦═══╡✨🌚🌝✨╞═══┅ৡৢ͜͡✦═╯*\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
