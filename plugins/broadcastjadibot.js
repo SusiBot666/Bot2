@@ -5,10 +5,10 @@ let handler = async (m, { conn, usedPrefix, text }) => {
   let teks = text ? text : cc.text
   let content = conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : teks + '\n' + readMore + '「 All Jadibot Broadcast 」')
   for (let id of users) conn.copyNForward(id, content, true)
-  conn.reply(m.chat, `_Berhasil mengirim broadcast ke ${users.length} nomor yang jadi bot_
+  conn.reply(m.chat, `_Transmisión enviada con éxito a ${users.length} número de bot_
 ${users.map(v => 'wa.me/' + v.replace(/[^0-9]/g, '') + `?text=${usedPrefix}menu`).join('\n')}`.trim(), m)
 }
-handler.help = ['broadcastjadibot', 'bcbot'].map(v => v + ' <teks>')
+handler.help = ['broadcastjadibot', 'bcbot'].map(v => v + ' ᴰᵉʲᵃ ᵉˢᵉ ᶜᵒᵐᵃⁿᵈᵒ ᵖᵃʳᵃ ᵉˡ ᵈᵘᵉⁿ̃ᵒ ᵈᵉˡ ᵇᵒᵗ')
 handler.tags = ['host']
 handler.command = /^(broadcast|bc)(jadi)?bot$/i
 handler.owner = true
