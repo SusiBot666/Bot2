@@ -10,7 +10,7 @@ let handler = async (m, { conn, text }) => {
     let teks = json.result.map(res => res.subject + '\n' + res.link).join('\n\n')
     m.reply(teks)
 }
-handler.help = ['carigrup <pencarian>']
+handler.help = ['carigrup ᵇᵘˢᶜᵃʳ']
 handler.tags = ['tools']
 
 handler.command = /^carigrup/i
