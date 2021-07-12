@@ -45,7 +45,9 @@ const defaultMenu = {
 │ Tiempo de actividad: *%uptime (%muptime)*
 │ Database: %rtotalreg of %totalreg
 │ Github:
-│ %github
+│ https://github.com/Susi666
+│ Whatsapp:
+│ wa.me/50377111111
 ╰────
 • < 🌟 ≫───•◦Comandos del BOT◦•───≪ 🌟 > •
 %readmore`.trimStart(),
