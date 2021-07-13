@@ -16,7 +16,7 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
 }
 handler.help = ['grupo ᵒᵖᵉⁿ / ᶜˡᵒˢᵉ']
 handler.tags = ['group']
-handler.command = /^(group)$/i
+handler.command = /^(grupo)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
