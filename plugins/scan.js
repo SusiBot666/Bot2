@@ -15,14 +15,14 @@ let handler = async (m, { conn, args }) => {
         }
         if (user.jid in global.db.data.users) isInDatabase = true
         let str = ` 
-*Nama:* ${conn.getName(user.jid)}
-*Nomor:* ${splitM(user.jid)}
-*Mention:* ${toM(user.jid)}
-*Api:* wa.me/${splitM(user.jid)}
-*Jid:* ${user.jid}
+*Nombre:* ${conn.getName(user.jid)}
+*Número:* ${splitM(user.jid)}
+*Mención:* ${toM(user.jid)}
+*Wa.me:* wa.me/${splitM(user.jid)}
+*Correo:* ${user.jid}
 *Whatsapp Bussines:* ${user.isBusiness ? 'Yes' : 'No'}
-*In Database:* ${isInDatabase ? 'Yes' : 'No'}
-*Group Yang Sama Dengan BOT:* ${sameGroup.length} *Group*
+*En la database:* ${isInDatabase ? 'Yes' : 'No'}
+*Grupos con el bot:* ${sameGroup.length} *Group*
 `.trim()
         m.reply(str, m.chat, { 
             contextInfo: { 
@@ -32,7 +32,7 @@ let handler = async (m, { conn, args }) => {
     } else throw 'Usuario no encontrado!!'
 }
     
-handler.help = ['scan'].map(v => v + ' [nomor]')
+handler.help = ['scan'].map(v => v + ' ᶦⁿᵍʳᵉˢᵃ ᵉˡ ⁿᵘᵐᵉʳᵒ')
 handler.tags = ['tools']
 handler.command = /^scan$/i
 
