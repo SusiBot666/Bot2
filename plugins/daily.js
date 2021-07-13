@@ -7,9 +7,9 @@ let handler = async (m, { isPrems }) => {
   m.reply(`+${isPrems ? prem : free} XP`)
   global.db.data.users[m.sender].lastclaim = new Date * 1
 }
-handler.help = ['daily', 'claim']
+handler.help = ['reclamar']
 handler.tags = ['xp']
-handler.command = /^(daily|claim)$/i
+handler.command = /^(reclamar)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
