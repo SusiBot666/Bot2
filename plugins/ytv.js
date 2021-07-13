@@ -23,7 +23,7 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
   asDocument: chat.useDocument
 })
 }
-handler.help = ['mp4','v',''].map(v => 'yt' + v + ` ᴱˢᶜʳᶦᵇᵉ ˡᵃ ᵘʳˡ ᵈᵉˡ ᵛᶦᵈᵉᵒ [server: ${servers.join(', ')}]`)
+handler.help = ['mp4'].map(v => 'yt' + v + ` ᴱˢᶜʳᶦᵇᵉ ˡᵃ ᵘʳˡ ᵈᵉˡ ᵛᶦᵈᵉᵒ`)
 handler.tags = ['downloader']
 handler.command = /^yt(v|mp4)?$/i
 handler.owner = false
