@@ -12,6 +12,7 @@ let tags = {
   'internet': '💥Internet💥',
   'downloader': '📥Descargas📥',
   'tools': '🛠Herramientas🛠',
+  'fun': '🎭Fun🎭',
   'owner': '😈Dueño😈',
   'advanced': '☠️Avanzado☠️',
   'info': '📱Info📱',
