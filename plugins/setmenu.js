@@ -19,7 +19,7 @@ let handler = async (m, { conn, command, text }) => {
     }
   }
 }
-handler.help = ['', 'before', 'header', 'body', 'footer', 'after'].map(v => 'setmenu' + v + ' <teks>')
+handler.help = ['header'].map(v => 'setmenu' + v + ' ᴴᵃᶻ ᵉˡ ᵐᵉⁿᵘ')
 handler.tags = ['owner']
 handler.command = /^set(menu|help|\?)(before|header|body|footer|after)?$/i
 handler.owner = true
