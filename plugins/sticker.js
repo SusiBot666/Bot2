@@ -7,16 +7,16 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     let mime = (q.msg || q).mimetype || ''
     if (/image/.test(mime)) {
       let img = await q.download()
-      if (!img) throw `balas gambar dengan caption *${usedPrefix + command}*`
+      if (!img) throw `responder a la imagen con subtítulo *${usedPrefix + command}*`
       stiker = await sticker(img, false, global.packname, global.author)
     } else if (/video/.test(mime)) {
       if ((q.msg || q).seconds > 11) return m.reply('Maksimal 10 detik!')
       let img = await q.download()
-      if (!img) throw `balas video/gif dengan caption *${usedPrefix + command}*`
+      if (!img) throw `responder a la imagen con subtítulo *${usedPrefix + command}*`
       stiker = await sticker(img, false, global.packname, global.author)
     } else if (/webp/.test(mime)) {
       let img = await q.download()
-      if (!img) throw `balas sticker dengan caption *${usedPrefix + command}*`
+      if (!img) throw `responder a la imagen con subtítulo *${usedPrefix + command}*`
       stiker = await sticker(img, false, global.packname, global.author)
     } else if (args[0]) {
       if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
@@ -29,7 +29,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     else throw 'Conversion failed'
   }
 }
-handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (caption|reply media)', 'stikergif <url>']
+handler.help = ['stiker ᴹᵃⁿᵈᵃ ˡᵃ ᶦᵐᵃᵍᵉⁿ ᵒ ᵉˡ ᵛᶦᵈᵉᵒ']
 handler.tags = ['sticker']
 handler.command = /^s(tic?ker)?(gif)?(wm)?$/i
 
