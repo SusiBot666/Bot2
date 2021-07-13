@@ -15,6 +15,7 @@ let tags = {
   'owner': '😈Dueño😈',
   'advanced': '☠️Avanzado☠️',
   'info': '📱Info📱',
+  'audio': '🎶Audio🎶',
 }
 const defaultMenu = {
   before: `
@@ -23,14 +24,12 @@ const defaultMenu = {
 │
 │ Limites *%limit Limit*
 │ Rango *%role*
-│ Nivel *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
+│ Nivel *%level (%exp / %maxexp)*
 │ %totalexp XP en Total
 │ Tiempo de actividad: *%uptime (%muptime)*
-│ Github:
-│ https://github.com/Susi666
-│ Whatsapp:
+│ *Whatsapp*:
 │ wa.me/50377111111
-│El Bot es usado por límites, genera xp y compra limites para usarlo siempre
+│*El Bot es usado por límites, genera xp y compra limites para usarlo siempre*
 ╰────
 • < 🌟 ≫───•◦Comandos del BOT◦•───≪ 🌟 > •
 %readmore`.trimStart(),
