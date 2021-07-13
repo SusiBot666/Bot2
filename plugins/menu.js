@@ -4,9 +4,8 @@ let levelling = require('../lib/levelling')
 let tags = {
   'main': '🎉Menu🎉',
   'game': '🎮Juegos🎮',
-  'xp': '📉Exp & Limit📉',
+  'exp': '📉Exp & Limit📉',
   'sticker': '🎃Sticker🎃',
-  'admin': '👑Admin👑',
   'group': '🌚Grupo🌝',
   'premium': '😈Premium😈',
   'internet': '💥Internet💥',
