@@ -19,18 +19,20 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭─「 %me 」
-│ Holaa, %name!
-│
-│ Limites *%limit Limit*
-│ Rango *%role*
-│ Nivel *%level (%exp / %maxexp)*
-│ %totalexp XP en Total
-│ Tiempo de actividad: *%uptime (%muptime)*
-│ *Whatsapp*:
-│ wa.me/50377111111
-│*El Bot es usado por límites, genera xp y compra limites para usarlo siempre*
-╰────
+*╭═┅〘  %me 〙═╮*
+*║┊:* 🙂𝗛𝗶, %name!
+*║┊:* 👑Mi Instagram
+*║┊:* Susana_monterroza_
+*║┊:* Numero de la Dueña del Bot
+*║┊:* +503 7779 2043
+*║┊:* Rango *%role*
+*║┊:* Nivel *%level (%exp / %maxexp)*
+*║┊:* %totalexp XP en Total
+*║┊:* Tiempo de actividad: *%uptime (%muptime)*
+*║┊:* *Whatsapp*:
+*║┊:* wa.me/50377111111
+*║┊:**El Bot es usado por límites, genera xp y compra limites para usarlo siempre*
+*╰═┅ৡৢ͜͡✦═══╡SusiBOT╞═══┅ৡৢ͜͡✦═╯*SusiBOT
 • < 🌟 ≫───•◦Comandos del BOT◦•───≪ 🌟 > •
 %readmore`.trimStart(),
   header: '╭═┅〘 %category 〙═╮',
