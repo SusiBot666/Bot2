@@ -20,7 +20,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       stiker = await sticker(img, false, global.packname, global.author)
     } else if (args[0]) {
       if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
-      else return m.reply('URL tidak valid!')
+      else return m.reply('URL invalida!')
     }
   } finally {
     if (stiker) conn.sendMessage(m.chat, stiker, MessageType.sticker, {
