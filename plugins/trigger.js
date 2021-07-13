@@ -16,7 +16,7 @@ let handler = async (m, { conn }) => {
 
 
 handler.help = ['trigger']
-handler.tags = ['maker']
+handler.tags = ['fun']
 
 handler.command = /^(trigger)$/i
 
