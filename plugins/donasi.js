@@ -1,12 +1,12 @@
 let handler = async m => m.reply(`
-╭─「 Donasi • Pulsa 」
-│ • Indosat Ooredoo [081515860089]
-│ • Telkomsel [081334177340]
+╭─〘Susana〙
+│ • 𝑃𝑎𝑦𝑝𝑎𝑙 [paypal.me/smonterroza12]
+│ • Pero con que me sigas en instagram me basta:)
+│ https://www.instagram.com/susana_monterroza_/
 ╰────
-
-╭─「 Donasi • Non Pulsa 」
-│ • Gopay, OVO, Dana [081515860089]
-│ • https://saweria.co/Nurutomo
+╭─「 Mi número por cualquier cosa 」
+│ > Wa.me/50377792043
+│ > Wa.me/50377111111
 ╰────
 `.trim()) // Tambah sendiri kalo mau
 handler.help = ['donasi']
