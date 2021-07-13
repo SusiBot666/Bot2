@@ -6,25 +6,14 @@ let tags = {
   'game': '🎮Juegos🎮',
   'xp': '📉Exp & Limit📉',
   'sticker': '🎃Sticker🎃',
-  'kerang': '✨Mágico✨',
-  'quotes': '✍🏼Citas✍🏼',
   'admin': '👑Admin👑',
   'group': '🌚Grupo🌝',
   'premium': '😈Premium😈',
   'internet': '💥Internet💥',
-  'anonymous': '🤐Anonymous Chat🤐',
-  'nulis': '✔Logos✔',
   'downloader': '📥Descargas📥',
   'tools': '🛠Herramientas🛠',
-  'fun': '🎭Fun🎭',
-  'database': '🔋Database🔋',
-  'vote': '🗞Votos🗞',
   'absen': '👻Fantasmas👻',
-  'quran': '😎Mas comandos🌚',
-  'jadibot': '🥵Susi Bot🥵',
   'owner': '😈Dueño😈',
-  'host': '⚡Host⚡',
-  'advanced': '☠️Avanzado☠️',
   'info': '📱Info📱',
   '': '📍NoAi📍',
 }
@@ -34,7 +23,7 @@ const defaultMenu = {
 │ Holaa, %name!
 │
 │ Limites *%limit Limit*
-│ Role *%role*
+│ Rango *%role*
 │ Nivel *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
 │ %totalexp XP en Total
 │ 
@@ -48,6 +37,7 @@ const defaultMenu = {
 │ https://github.com/Susi666
 │ Whatsapp:
 │ wa.me/50377111111
+│El Bot es usado por límites, genera xp y compra limites para usarlo siempre
 ╰────
 • < 🌟 ≫───•◦Comandos del BOT◦•───≪ 🌟 > •
 %readmore`.trimStart(),
