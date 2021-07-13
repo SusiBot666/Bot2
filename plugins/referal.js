@@ -56,7 +56,7 @@ ${Object.entries(xp_bonus).map(([count, xp]) => `${count} Orang = Bonus ${xp} XP
   }
 }
 handler.help = ['ref ᴳᵃⁿᵃ ˣᵖ ᶜᵒⁿ ᵗᵘ ᶜᵒ́ᵈᶦᵍᵒ']
-handler.tags = ['fun']
+handler.tags = ['exp']
 
 handler.command = ['ref']
 
