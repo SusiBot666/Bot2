@@ -3,10 +3,10 @@ let handler = async (m, { conn, participants }) => {
   let users = m.mentionedJid.filter(user => members.includes(user))
   for (let user of users) await conn.groupDemoteAdmin(m.chat, [user]).catch(console.log)
 }
-handler.help = ['demote','member','↓'].map(v => v + ' @user')
+handler.help = ['degradar'].map(v => v + ' @ᵁˢᵘᵃʳᶦᵒ')
 handler.tags = ['admin']
 
-handler.command = /^(demote|member|↓)$/i
+handler.command = /^(degradar)$/i
 
 handler.group = true
 
