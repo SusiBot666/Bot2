@@ -9,7 +9,7 @@ let handler = async (m, { conn, text }) => {
   })
   throw stiker.toString()
 }
-handler.help = ['ttp <teks>']
+handler.help = ['ttp ᴴᵃᶜᵉ ᵉˡ ˢᵗᶦᶜᵏᵉʳ ᵉⁿ ᵗᵉˣᵗᵒ']
 handler.tags = ['sticker']
 
 handler.command = /^ttp$/i
