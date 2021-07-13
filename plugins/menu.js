@@ -27,13 +27,7 @@ const defaultMenu = {
 │ Rango *%role*
 │ Nivel *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
 │ %totalexp XP en Total
-│ 
-│ Fecha: *%week %weton, %date*
-│ Fecha en Islam xd: *%dateIslamic*
-│ Hora: *%time*
-│
 │ Tiempo de actividad: *%uptime (%muptime)*
-│ Database: %rtotalreg of %totalreg
 │ Github:
 │ https://github.com/Susi666
 │ Whatsapp:
@@ -42,7 +36,7 @@ const defaultMenu = {
 ╰────
 • < 🌟 ≫───•◦Comandos del BOT◦•───≪ 🌟 > •
 %readmore`.trimStart(),
-  header: '╭═┅〘✨ %category 〙═╮',
+  header: '╭═┅〘 %category 〙═╮',
   body: '  • *▌┠❧ %cmd%islimit',
   footer: '╰═┅ৡৢ͜͡✦═══╡✨🌚🌝✨╞═══┅ৡৢ͜͡✦═╯*\n',
   after: `
