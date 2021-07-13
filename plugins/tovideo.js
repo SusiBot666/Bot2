@@ -19,7 +19,7 @@ let handler = async (m, { conn }) => {
     }
     await conn.sendFile(m.chat, out, 'out.mp4', null, m)
 }
-handler.help = ['tovideo (reply)']
+handler.help = ['tovideo ᶜʳᵉᵃ ᵉˡ ˢᵗᶦᶜᵏᵉʳ ᵒ ᵃᵘᵈᶦᵒ ᵉⁿ ᵛᶦᵈᵉᵒ']
 handler.tags = ['sticker']
 
 handler.command = ['tovideo']
