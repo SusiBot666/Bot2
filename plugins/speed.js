@@ -42,14 +42,14 @@ let handler = async (m, { conn }) => {
   let neww = performance.now()
   let speed = neww - old
   let txt = `
-Merespon dalam ${speed} millidetik
+Su rapidez es de ${speed} 
 
 💬 Status :
-- *${groups.length}* Group Chats
-- *${groupsIn.length}* Groups Joined
-- *${groups.length - groupsIn.length}* Groups Left
-- *${chats.length - groups.length}* Personal Chats
-- *${chats.length}* Total Chats
+- *${groups.length}* Grupos
+- *${groupsIn.length}* Adentro de Grupos
+- *${groups.length - groupsIn.length}* Grupos que se a salido
+- *${chats.length - groups.length}* Chats privados
+- *${chats.length}* Total de chats
 
 📱 *Phone Info* :
 ${'```' + `
@@ -71,7 +71,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 `.trim()
   m.reply(txt)
 }
-handler.help = ['ping', 'speed']
+handler.help = ['speed']
 handler.tags = ['info', 'tools']
 
 handler.command = /^(ping|speed|info)$/i
