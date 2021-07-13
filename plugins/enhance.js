@@ -16,8 +16,8 @@ let handler = async (m) => {
   if (res.status !== 200) throw await res.json()
   await conn.sendFile(m.chat, await res.buffer(), 'hd.jpg', 'Nih, hd kan?', m)
 }
-handler.help = ['hd ᵀᵉ ʰᵃᶜᵉ ˡᵃ ᶠᵒᵗᵒ ʰᵈ', 'enhance ᵀᵉ ʰᵃᶜᵉ ˡᵃ ᶠᵒᵗᵒ ʰᵈ']
+handler.help = ['hd ᵀᵉ ʰᵃᶜᵉ ˡᵃ ᶠᵒᵗᵒ ʰᵈ']
 handler.tags = ['tools']
-handler.command = /^(hd|enhance)$/i
+handler.command = /^(hd)$/i
 
 module.exports = handler
