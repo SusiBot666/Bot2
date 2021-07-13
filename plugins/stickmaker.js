@@ -7,16 +7,16 @@ const effects = ['jail', 'gay', 'glass', 'wasted' ,'triggered']
 let handler = async (m, { conn, usedPrefix, text }) => {
     let effect = text.trim().toLowerCase()
   if (!effects.includes(effect)) throw `
-*Usage:* ${usedPrefix}stickmaker <effectname>
-*Example:* ${usedPrefix}stickmaker jail
+*Usa:* ${usedPrefix}stickmaker <nombre del efecto>
+*Ejemplo:* ${usedPrefix}stickmaker jail
 
 *List Effect:*
 ${effects.map(effect => `_> ${effect}_`).join('\n')}
 `.trim()
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
-  if (!mime) throw 'No Image Found'
-  if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} not support`
+  if (!mime) throw 'No se ha encontrado ninguna imagen'
+  if (!/image\/(jpe?g|png)/.test(mime)) throw `${mime} no es compatible`
   let img = await q.download()
   let url = await uploadImage(img)
   let apiUrl = global.API('https://some-random-api.ml/canvas/', encodeURIComponent(effect), {
@@ -33,7 +33,7 @@ try {
   }
 }
 
-handler.help = ['stickmaker (caption|reply media)']
+handler.help = ['stickmaker ᴸᵉ ᵖᵒⁿᵉ ᵉᶠᵉᶜᵗᵒˢ ᵃ ˡᵒˢ ˢᵗᶦᶜᵏᵉʳˢ']
 handler.tags = ['sticker']
 handler.command = /^(stickmaker)$/i
 handler.limit = true
