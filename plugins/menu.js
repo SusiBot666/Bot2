@@ -16,7 +16,6 @@ let tags = {
   'owner': '😈Dueño😈',
   'advanced': '☠️Avanzado☠️',
   'info': '📱Info📱',
-  '': '📍NoAi📍',
 }
 const defaultMenu = {
   before: `
