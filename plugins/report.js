@@ -9,7 +9,7 @@ let handler = async(m, { conn, text }) => {
     m.reply(laporan, m.sender) // Mwehehehehe
     m.reply('️El problema se ha informado al propietario del robot, no se responderán los informes falsos!')
 }
-handler.help = ['bug',].map(v => v + ' ᴿᵉᵖᵒʳᵗᵃ ᶜᵘᵃˡᑫᵘᶦᵉʳ ᵇᵘᵍ ʳᵉᵃˡ')
+handler.help = ['bug'].map(v => v + ' ᴿᵉᵖᵒʳᵗᵃ ᶜᵘᵃˡᑫᵘᶦᵉʳ ᵇᵘᵍ ʳᵉᵃˡ')
 handler.tags = ['info']
 handler.command = /^(bug|report)$/i
 
